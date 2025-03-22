@@ -17,6 +17,8 @@ export default [
             
             { name: 'threejsJourneyLogoTexture', source: '/assets/era.png', type: 'texture' },
             
+            { name: 'vietnamMapTexture', source: '/assets/Group 2.png', type: 'texture' },
+            
             { name: 'pcScreenModel', source: '/assets/pcScreenModel.glb', type: 'model' },
             
             { name: 'macScreenModel', source: '/assets/macScreenModel.glb', type: 'model' },
@@ -26,6 +28,8 @@ export default [
             { name: 'bakedNeutralTexture', source: '/assets/bakedNeutral.jpg', type: 'texture' },
             { name: 'lightMapTexture', source: '/assets/lightMap.jpg', type: 'texture' },
             { name: 'roomModel', source: '/assets/roomModel.glb' },
+            { name: 'teddyBearModel', source: '/assets/teddy_bear.glb', type: 'model' },
+            { name: 'weBareBearsModel', source: '/assets/we_bare_bears.glb', type: 'model' }
         ]
     }
 ]

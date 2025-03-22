@@ -6,9 +6,11 @@ import LoupedeckButtons from './LoupedeckButtons.js'
 import CoffeeSteam from './CoffeeSteam.js'
 import TopChair from './TopChair.js'
 import ElgatoLight from './ElgatoLight.js'
-import BouncingLogo from './BouncingLogo.js'
+import VietnamMap from './VietnamMap.js'
 import Screen from './Screen.js'
-import RoomTemperature from './RoomTemperature.js'
+import TeddyBear from './TeddyBear.js'
+import WeBareBears from './WeBareBears.js'
+import { RunningText } from './RunningText.js'
 
 export default class World
 {
@@ -29,9 +31,12 @@ export default class World
                 this.setCoffeeSteam()
                 this.setTopChair()
                 this.setElgatoLight()
-                this.setBouncingLogo()
+                this.setVietnamMap()
                 this.setScreens()
-                this.setTemperature()
+                this.setTeddyBear()
+                // this.setWeBareBears()
+                // Add running text
+                this.runningText = new RunningText()
             }
         })
     }
@@ -66,9 +71,9 @@ export default class World
         this.elgatoLight = new ElgatoLight()
     }
 
-    setBouncingLogo()
+    setVietnamMap()
     {
-        this.bouncingLogo = new BouncingLogo()
+        this.vietnamMap = new VietnamMap()
     }
 
     setScreens()
@@ -83,10 +88,15 @@ export default class World
         )
     }
 
-    setTemperature()
+    setTeddyBear()
     {
-        this.roomTemperature = new RoomTemperature()
+        this.teddyBear = new TeddyBear()
     }
+
+    // setWeBareBears()
+    // {
+    //     this.weBareBears = new WeBareBears()
+    // }
 
     resize()
     {
@@ -106,14 +116,13 @@ export default class World
         if(this.topChair)
             this.topChair.update()
 
-        if(this.bouncingLogo)
-            this.bouncingLogo.update()
-
-        if(this.roomTemperature)
-            this.roomTemperature.update()
+        if(this.runningText)
+            this.runningText.update()
     }
 
     destroy()
     {
+        if(this.runningText)
+            this.runningText.destroy()
     }
 }
